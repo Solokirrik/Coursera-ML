@@ -1,1 +1,2 @@
-Coursera-ML
+Coursera Machine Learning 
+by Stanford University
