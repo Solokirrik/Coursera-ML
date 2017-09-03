@@ -21,11 +21,14 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+new_frame = zeros(size(X,1), K)
 
-
-
-
-
+for i=1:size(X,1)
+  for j=1:K
+    new_frame(i,j) = sum((X(i,:)-centroids(j,:)).^2);
+  end
+end
+[dists, idx] = min(new_frame, [], 2);
 
 % =============================================================
 
